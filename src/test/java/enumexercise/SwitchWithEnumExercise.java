@@ -8,6 +8,10 @@ public class SwitchWithEnumExercise {
         enumExercise.getContact(Contact.ANDRIY);
         enumExercise.getContact(Contact.IVAN);
         enumExercise.getContact(Contact.STEPAN);
+
+        System.out.println("Get status of " + Contact.STEPAN + ": " + Contact.STEPAN.status);
+        System.out.println("Get age of " + Contact.STEPAN + ": " + Contact.STEPAN.age);
+        System.out.println(Contact.valueOf("IVAN"));
     }
 
     public void getContact(Contact contact) {
