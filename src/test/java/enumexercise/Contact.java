@@ -1,16 +1,25 @@
 package enumexercise;
 
 public enum Contact {
-    ANDRIY("Student", 35),
-    IVAN("Worker", 42),
-    STEPAN("Unemployed", 40);
+    ANDRIY("Andriy", 35),
+    IVAN("Ivan", 42),
+    STEPAN("Stepan", 40);
 
-    String status;
+    String name;
     int age;
 
 
-    Contact(String status, int age) {
-        this.status = status;
+    Contact(String name, int age) {
+        this.name = name;
         this.age = age;
+    }
+
+    public static Contact getEnumValue(String name) {
+        for (Contact e : values()) {
+            if (e.name.equals(name)) {
+                return e;
+            }
+        }
+        return null;
     }
 }
